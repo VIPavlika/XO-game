@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log.d
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatButton
+import androidx.appcompat.widget.ButtonBarLayout
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -59,9 +61,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun playerChecker(button: Button) {
-
-        Button00.setOnClickListener {
+    private fun playerChecker(appCompatButton: AppCompatButton) {
             d("onClick", "Button00")
             if (playerOne) {
                 Button00.text = "X"
@@ -71,7 +71,6 @@ class MainActivity : AppCompatActivity() {
             Button00.isClickable = false
             playerOne = !playerOne
             checkWinner()
-        }
     }
 
     private fun checkWinner() {
