@@ -1,12 +1,10 @@
 package com.example.tictactoe
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log.d
 import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.widget.AppCompatButton
-import androidx.appcompat.widget.ButtonBarLayout
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -61,14 +59,14 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun playerChecker(appCompatButton: AppCompatButton) {
+    private fun playerChecker(button: Button) {
             d("onClick", "Button00")
             if (playerOne) {
-                Button00.text = "X"
+                button.text = "X"
             } else {
-                Button00.text = "0"
+                button.text = "0"
             }
-            Button00.isClickable = false
+            button.isClickable = false
             playerOne = !playerOne
             checkWinner()
     }
