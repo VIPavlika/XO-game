@@ -97,7 +97,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="550dp"
         android:text="@string/new_game"
-        android:textSize="25sp"
+        android:textSize="24sp"
         android:textAllCaps="false"
         android:textStyle="bold"
         android:background="@color/teal_200">
